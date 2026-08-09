@@ -1,180 +1,619 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lior Boutique Maroc | Mode & Beauté</title>
+  <title>Lior Boutique Maroc | Mode Femme & Beauté</title>
 
-<meta name="description" content="Lior Boutique Maroc - Boutique de vêtements femme et cosmétiques au Maroc">
+  <meta name="description" content="Lior Boutique Maroc - Découvrez notre sélection de vêtements femme, mode, beauté et cosmétiques au Maroc.">
+  <meta name="keywords" content="Lior Boutique Maroc, vêtements femme Maroc, mode femme, cosmétiques Maroc, beauté femme">
+  <meta name="author" content="Lior Boutique Maroc">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<header>
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="accueil">
+
+    <div class="container nav-container">
+
+      <a href="#accueil" class="logo">
+        <span>LIOR</span>
+        <small>BOUTIQUE MAROC</small>
+      </a>
 
-<div class="logo">
-    <img src="images/logo.png" alt="Lior Boutique Maroc">
-    <h1>Lior Boutique Maroc</h1>
-    <p>Mode • Beauté • Élégance</p>
-</div>
+      <nav class="nav" id="mainNav">
+        <a href="#accueil">Accueil</a>
+        <a href="#collections">Collections</a>
+        <a href="#vetements">Vêtements</a>
+        <a href="#beaute">Beauté</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
+      <div class="nav-actions">
+        <a href="#collections" class="shop-icon" aria-label="Boutique">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </a>
 
-<nav>
-<a href="#accueil">Accueil</a>
-<a href="#produits">Produits</a>
-<a href="#apropos">À propos</a>
-<a href="#contact">Contact</a>
-</nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
 
-</header>
+    </div>
+  </header>
 
 
+  <!-- ================= HERO ================= -->
+  <main>
+
+    <section class="hero">
 
-<section class="hero" id="accueil">
+      <div class="hero-overlay"></div>
 
-<div class="hero-content">
+      <div class="container hero-content">
 
-<h2>Votre style, votre beauté</h2>
+        <span class="hero-subtitle">
+          ✨ COLLECTION 2026
+        </span>
 
-<p>
-Découvrez nos vêtements féminins élégants
-et nos produits cosmétiques tendance au Maroc.
-</p>
+        <h1>
+          Élégance<br>
+          <span>qui vous ressemble</span>
+        </h1>
 
-<a class="btn" 
-href="https://wa.me/212624581369" 
-target="_blank">
+        <p>
+          Découvrez notre sélection de mode féminine,
+          beauté et cosmétiques soigneusement choisie
+          pour révéler votre style.
+        </p>
 
-Commander WhatsApp
+        <div class="hero-buttons">
+          <a href="#collections" class="btn btn-primary">
+            Découvrir la boutique
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
-</a>
+          <a href="https://wa.me/212624581369"
+             class="btn btn-whatsapp"
+             target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            Commander
+          </a>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </section>
 
 
+    <!-- ================= FEATURES ================= -->
+    <section class="features">
 
+      <div class="container features-grid">
 
-<section id="produits">
+        <div class="feature">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <h3>Livraison au Maroc</h3>
+            <p>Livraison rapide selon votre ville</p>
+          </div>
+        </div>
 
-<h2>Nos Collections</h2>
+        <div class="feature">
+          <i class="fa-solid fa-heart"></i>
+          <div>
+            <h3>Sélection avec soin</h3>
+            <p>Des articles choisis pour vous</p>
+          </div>
+        </div>
 
+        <div class="feature">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <h3>Service client</h3>
+            <p>Nous sommes à votre écoute</p>
+          </div>
+        </div>
 
-<div class="products">
+      </div>
 
+    </section>
 
-<div class="product-card">
 
-<img src="images/vetements.jpg">
+    <!-- ================= COLLECTIONS ================= -->
+    <section class="section collections" id="collections">
 
-<h3>Vêtements Femme</h3>
+      <div class="container">
 
-<p>
-Robes, ensembles et styles modernes.
-</p>
+        <div class="section-heading">
+          <span>NOTRE UNIVERS</span>
+          <h2>Découvrez nos collections</h2>
+          <p>
+            Mode et beauté réunies dans une seule boutique.
+          </p>
+        </div>
 
-</div>
+        <div class="collection-grid">
 
+          <a href="#vetements" class="collection-card clothing-card">
 
+            <div class="collection-image">
+              <div class="collection-content">
+                <span>01</span>
+                <h3>Mode Femme</h3>
+                <p>Élégance & tendances</p>
+                <strong>Découvrir <i class="fa-solid fa-arrow-right"></i></strong>
+              </div>
+            </div>
 
-<div class="product-card">
+          </a>
 
-<img src="images/cosmetique.jpg">
 
-<h3>Cosmétiques</h3>
+          <a href="#beaute" class="collection-card beauty-card">
 
-<p>
-Maquillage et soins beauté.
-</p>
+            <div class="collection-image">
+              <div class="collection-content">
+                <span>02</span>
+                <h3>Beauté & Cosmétiques</h3>
+                <p>Révélez votre beauté</p>
+                <strong>Découvrir <i class="fa-solid fa-arrow-right"></i></strong>
+              </div>
+            </div>
 
-</div>
+          </a>
 
 
+          <a href="#nouveautes" class="collection-card new-card">
 
-<div class="product-card">
+            <div class="collection-image">
+              <div class="collection-content">
+                <span>03</span>
+                <h3>Nouveautés</h3>
+                <p>Les dernières tendances</p>
+                <strong>Découvrir <i class="fa-solid fa-arrow-right"></i></strong>
+              </div>
+            </div>
 
-<img src="images/nouveaute.jpg">
+          </a>
 
-<h3>Nouveautés</h3>
+        </div>
 
-<p>
-Les dernières tendances.
-</p>
+      </div>
 
-</div>
+    </section>
 
 
-</div>
+    <!-- ================= VETEMENTS ================= -->
+    <section class="section products-section" id="vetements">
 
-</section>
+      <div class="container">
 
+        <div class="section-heading">
+          <span>MODE FEMME</span>
+          <h2>Nos vêtements</h2>
+          <p>
+            Des pièces élégantes pour chaque occasion.
+          </p>
+        </div>
 
 
+        <div class="products-grid">
 
-<section id="apropos">
+          <article class="product-card">
 
-<h2>À propos de Lior Boutique</h2>
+            <div class="product-image">
+              <span class="product-badge">Nouveau</span>
 
-<p>
-Lior Boutique Maroc vous propose une sélection
-de vêtements et produits beauté pour femmes,
-avec un service rapide et simple par WhatsApp.
-</p>
+              <div class="image-placeholder">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Votre photo produit</span>
+              </div>
+            </div>
 
-</section>
+            <div class="product-info">
+              <span class="product-category">Mode Femme</span>
+              <h3>Collection Élégance</h3>
 
+              <div class="product-bottom">
+                <strong>Prix sur demande</strong>
 
+                <a href="https://wa.me/212624581369?text=Bonjour%20Lior%20Boutique%2C%20je%20suis%20intéressée%20par%20la%20Collection%20Élégance."
+                   target="_blank"
+                   class="order-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Commander
+                </a>
+              </div>
+            </div>
 
+          </article>
 
 
-<section id="contact">
+          <article class="product-card">
 
-<h2>Contact</h2>
+            <div class="product-image">
 
-<p>
-📱 WhatsApp : 0624581369
-</p>
+              <div class="image-placeholder">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Votre photo produit</span>
+              </div>
 
-<p>
-📧 Email : lioraboutiquemaroc@gmail.com
-</p>
+            </div>
 
-<p>
-🇲🇦 Maroc
-</p>
+            <div class="product-info">
+              <span class="product-category">Mode Femme</span>
+              <h3>Look Tendance</h3>
 
-</section>
+              <div class="product-bottom">
+                <strong>Prix sur demande</strong>
 
+                <a href="https://wa.me/212624581369?text=Bonjour%20Lior%20Boutique%2C%20je%20suis%20intéressée%20par%20le%20Look%20Tendance."
+                   target="_blank"
+                   class="order-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Commander
+                </a>
+              </div>
+            </div>
 
+          </article>
 
 
+          <article class="product-card">
 
-<a class="whatsapp"
-href="https://wa.me/212624581369"
-target="_blank">
+            <div class="product-image">
 
-WhatsApp
+              <div class="image-placeholder">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Votre photo produit</span>
+              </div>
 
-</a>
+            </div>
 
+            <div class="product-info">
+              <span class="product-category">Mode Femme</span>
+              <h3>Style Moderne</h3>
 
+              <div class="product-bottom">
+                <strong>Prix sur demande</strong>
 
+                <a href="https://wa.me/212624581369?text=Bonjour%20Lior%20Boutique%2C%20je%20suis%20intéressée%20par%20le%20Style%20Moderne."
+                   target="_blank"
+                   class="order-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Commander
+                </a>
+              </div>
+            </div>
 
-<footer>
+          </article>
 
-<p>
-© 2026 Lior Boutique Maroc - Tous droits réservés
-</p>
+        </div>
 
-</footer>
+      </div>
 
+    </section>
 
 
-<script src="script.js"></script>
+    <!-- ================= BEAUTY ================= -->
+    <section class="section beauty-section" id="beaute">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <span>BEAUTÉ</span>
+          <h2>Beauté & Cosmétiques</h2>
+          <p>
+            Prenez soin de vous avec notre sélection beauté.
+          </p>
+        </div>
+
+
+        <div class="products-grid">
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <span class="product-badge">Beauté</span>
+
+              <div class="image-placeholder beauty-placeholder">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Votre photo produit</span>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Cosmétiques</span>
+              <h3>Collection Beauté</h3>
+
+              <div class="product-bottom">
+                <strong>Prix sur demande</strong>
+
+                <a href="https://wa.me/212624581369?text=Bonjour%20Lior%20Boutique%2C%20je%20suis%20intéressée%20par%20la%20Collection%20Beauté."
+                   target="_blank"
+                   class="order-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Commander
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <div class="image-placeholder beauty-placeholder">
+                <i class="fa-solid fa-spray-can-sparkles"></i>
+                <span>Votre photo produit</span>
+              </div>
+
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Beauté</span>
+              <h3>Essentiels Beauté</h3>
+
+              <div class="product-bottom">
+                <strong>Prix sur demande</strong>
+
+                <a href="https://wa.me/212624581369?text=Bonjour%20Lior%20Boutique%2C%20je%20suis%20intéressée%20par%20les%20Essentiels%20Beauté."
+                   target="_blank"
+                   class="order-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Commander
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <div class="image-placeholder beauty-placeholder">
+                <i class="fa-solid fa-gem"></i>
+                <span>Votre photo produit</span>
+              </div>
+
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Beauté</span>
+              <h3>Éclat & Soin</h3>
+
+              <div class="product-bottom">
+                <strong>Prix sur demande</strong>
+
+                <a href="https://wa.me/212624581369?text=Bonjour%20Lior%20Boutique%2C%20je%20suis%20intéressée%20par%20Éclat%20%26%20Soin."
+                   target="_blank"
+                   class="order-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Commander
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="cta" id="nouveautes">
+
+      <div class="container">
+
+        <div class="cta-content">
+
+          <span>LIOR BOUTIQUE MAROC</span>
+
+          <h2>
+            Votre style.<br>
+            Votre beauté. Votre Lior.
+          </h2>
+
+          <p>
+            Une question sur un article ?
+            Contactez-nous directement sur WhatsApp.
+          </p>
+
+          <a href="https://wa.me/212624581369"
+             class="btn btn-whatsapp"
+             target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            Nous contacter sur WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact-section" id="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <span>CONTACT</span>
+          <h2>Nous contacter</h2>
+          <p>
+            L'équipe Lior Boutique Maroc est à votre disposition.
+          </p>
+        </div>
+
+
+        <div class="contact-grid">
+
+          <a href="https://wa.me/212624581369"
+             target="_blank"
+             class="contact-card">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            <h3>WhatsApp</h3>
+            <p>Commande & renseignements</p>
+
+          </a>
+
+
+          <a href="mailto:lioraboutiquemaroc@gmail.com"
+             class="contact-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Email</h3>
+            <p>lioraboutiquemaroc@gmail.com</p>
+
+          </a>
+
+
+          <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Maroc</h3>
+            <p>Livraison selon disponibilité</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="#accueil" class="logo footer-logo">
+          <span>LIOR</span>
+          <small>BOUTIQUE MAROC</small>
+        </a>
+
+        <p>
+          Mode féminine, beauté et élégance au Maroc.
+        </p>
+
+        <div class="social-links">
+
+          <a href="https://wa.me/212624581369"
+             target="_blank"
+             aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="mailto:lioraboutiquemaroc@gmail.com"
+             aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h3>Boutique</h3>
+
+        <a href="#collections">Collections</a>
+        <a href="#vetements">Vêtements</a>
+        <a href="#beaute">Beauté</a>
+        <a href="#nouveautes">Nouveautés</a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h3>Informations</h3>
+
+        <a href="#contact">Contact</a>
+        <a href="#accueil">Accueil</a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <h3>Contact</h3>
+
+        <a href="mailto:lioraboutiquemaroc@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          lioraboutiquemaroc@gmail.com
+        </a>
+
+        <a href="https://wa.me/212624581369"
+           target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 Lior Boutique Maroc. Tous droits réservés.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= WHATSAPP FLOATING ================= -->
+
+  <a href="https://wa.me/212624581369"
+     class="whatsapp-float"
+     target="_blank"
+     aria-label="Commander sur WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+
+  <!-- ================= SCRIPT ================= -->
+
+  <script src="script.js"></script>
 
 </body>
 </html>
