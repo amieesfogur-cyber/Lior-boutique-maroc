@@ -174,3 +174,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+/* ================= PRODUCT SEARCH & FILTER ================= */
+
+const searchInput = document.getElementById("productSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const productCards = document.querySelectorAll(".product-card");
+
+function filterProducts() {
+
+  const searchValue = searchInput
+    ? searchInput.value.toLowerCase().trim()
+    : "";
+
+  const activeFilter =
+    document.querySelector(".filter-btn.active")?.dataset.filter || "all";
+
+  productCards.forEach(card => {
+
+    const name =
+      (card.dataset.name || "").toLowerCase();
+
+    const category =
+      card.dataset.category || "";
+
+    const matchesSearch =
+      name.includes(searchValue);
+
+    const matchesCategory =
+      activeFilter === "all" ||
+      category === activeFilter;
+
+    if (matchesSearch && matchesCategory) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+
+  });
+
+}
+
+
+/* Search */
+
+if (searchInput) {
+
+  searchInput.addEventListener("input", filterProducts);
+
+}
+
+
+/* Filters */
+
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    filterButtons.forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    filterProducts();
+
+  });
+
+});
