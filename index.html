@@ -208,7 +208,7 @@
     <div class="products-grid">
 
       <!-- Produit 1 -->
-      <article class="product-card">
+      <article class="product-card" data-category="vetements" data-name="Robe Élégance">
 
         <div class="product-image">
           <span class="product-badge">Nouveau</span>
@@ -244,8 +244,8 @@
 
 
       <!-- Produit 2 -->
-      <article class="product-card">
-
+      
+<article class="product-card" data-category="vetements" data-name="Robe Élégance">
         <div class="product-image">
 
           <img
@@ -280,7 +280,7 @@
 
 
       <!-- Produit 3 -->
-      <article class="product-card">
+      <article class="product-card" data-category="vetements" data-name="Robe Élégance">
 
         <div class="product-image">
           <span class="product-badge">Tendance</span>
@@ -320,7 +320,36 @@
   </div>
 
 </section>
+<div class="shop-tools">
 
+  <div class="search-box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <input
+      type="search"
+      id="productSearch"
+      placeholder="Rechercher un produit..."
+      autocomplete="off"
+    >
+  </div>
+
+  <div class="filter-buttons">
+
+    <button class="filter-btn active" data-filter="all">
+      Tous
+    </button>
+
+    <button class="filter-btn" data-filter="vetements">
+      Vêtements
+    </button>
+
+    <button class="filter-btn" data-filter="beaute">
+      Beauté
+    </button>
+
+  </div>
+
+</div>
 
 <!-- ================= BEAUTÉ ================= -->
 <section class="section beauty-section" id="beaute">
