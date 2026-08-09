@@ -1,31 +1,176 @@
-// Lior Boutique Maroc
+/* =========================================================
+   LIOR BOUTIQUE MAROC
+   Interactive JavaScript
+   ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Bienvenue chez Lior Boutique Maroc");
+  /* ================= MOBILE MENU ================= */
 
-});
+  const menuBtn = document.getElementById("menuBtn");
+  const mainNav = document.getElementById("mainNav");
+
+  if (menuBtn && mainNav) {
+
+    menuBtn.addEventListener("click", () => {
+
+      mainNav.classList.toggle("active");
+
+      const icon = menuBtn.querySelector("i");
+
+      if (mainNav.classList.contains("active")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+
+    });
 
 
-// Animation simple au scroll
+    /* Close menu after clicking a link */
 
-const sections = document.querySelectorAll("section");
+    const navLinks = mainNav.querySelectorAll("a");
 
-window.addEventListener("scroll", ()=>{
+    navLinks.forEach(link => {
 
-    sections.forEach(section=>{
+      link.addEventListener("click", () => {
 
-        let position = section.getBoundingClientRect().top;
+        mainNav.classList.remove("active");
 
-        let screen = window.innerHeight;
+        const icon = menuBtn.querySelector("i");
 
-        if(position < screen - 100){
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
 
-            section.style.opacity = "1";
-            section.style.transform = "translateY(0)";
+      });
+
+    });
+
+  }
+
+
+  /* ================= HEADER SCROLL ================= */
+
+  const header = document.querySelector(".header");
+
+  window.addEventListener("scroll", () => {
+
+    if (!header) return;
+
+    if (window.scrollY > 30) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+
+  });
+
+
+  /* ================= REVEAL ANIMATION ================= */
+
+  const revealElements = document.querySelectorAll(
+    ".section-heading, .collection-card, .product-card, .contact-card, .feature"
+  );
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("visible");
+
+          observer.unobserve(entry.target);
 
         }
 
+      });
+
+    },
+    {
+      threshold: 0.12
+    }
+  );
+
+
+  revealElements.forEach(element => {
+
+    element.classList.add("reveal");
+
+    revealObserver.observe(element);
+
+  });
+
+
+  /* ================= SMOOTH ANCHOR ================= */
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (event) {
+
+      const targetId = this.getAttribute("href");
+
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      const headerHeight = header
+        ? header.offsetHeight
+        : 0;
+
+      const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+
     });
+
+  });
+
+
+  /* ================= WHATSAPP BUTTON ================= */
+
+  const whatsappButton =
+    document.querySelector(".whatsapp-float");
+
+  if (whatsappButton) {
+
+    whatsappButton.addEventListener("click", () => {
+
+      console.log(
+        "Lior Boutique Maroc - WhatsApp opened"
+      );
+
+    });
+
+  }
+
+
+  /* ================= CURRENT YEAR ================= */
+
+  const yearElement =
+    document.querySelector(".footer-bottom p");
+
+  if (yearElement) {
+
+    const currentYear = new Date().getFullYear();
+
+    yearElement.innerHTML =
+      `© ${currentYear} Lior Boutique Maroc. Tous droits réservés.`;
+
+  }
+
 
 });
